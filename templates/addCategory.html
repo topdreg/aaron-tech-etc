@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
+    <title>Vintage Gaming, Inc.</title> 
+  </head>
+  <body>
+    <header class="box">
+      <p class="mainTitle">Vintage Gaming, Inc.</p>
+    </header>
+    <div class="box sloganBox">
+      <p class="slogan">Be a Kid Again</p>
+    </div>
+    <div class="divider"></div> 
+    <main>
+			<form class="submitForm" action='{{url_for('addCategory')}}' method='post'> 
+				<h1 class="titleHeader">Add Category</h1> 
+				<h2>Name</h2> 
+				<input class="inputBox" type='text' size='40' placeholder="Add name of category here.." name='name'> 
+				<br>
+				<input class="button submit" type='submit' value="Submit" name="button submit"> 
+				<a href='{{url_for('showCatalog')}}'><input class="button cancel" type="button" value="Cancel"></a>
+			</form>
+    </main> 
+  </body> 
+</html> 
+

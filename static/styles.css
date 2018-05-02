@@ -1,0 +1,161 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+img, embed,
+object, video {
+	max-width: 100%;
+}
+
+.box {
+	display: flex; 
+}
+
+header {
+	height: 50px;
+	width: 100%;
+	white-space: nowrap;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+main {
+	font-family: 'EB Garamond', serif;
+	display: flex;
+}
+
+.displayMain {
+	flex-flow: row wrap; 
+	justify-content: space-evenly;
+}
+
+.formMain {
+	margin: 0 40px;
+}
+
+input {
+	font-family: 'EB Garamond', serif;
+}
+
+.mainTitle {
+	margin: auto; 
+	font-family: 'Special Elite', cursive;
+	font-size: 35px;
+	text-decoration: none;
+	color: black;
+}
+
+.infoBox {
+	height: 400px;
+	width: 400px;
+	font-size: 22px;
+	text-decoration: none; 
+	color: black;
+}
+
+.itemName {
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+
+.itemPrice {
+	text-align: center;
+	padding-top: 5px;
+}
+
+.itemDescription {
+}
+
+.itemImage {
+	display: block;
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-top: 30px;
+}
+
+.sloganBox {
+	height: 40px; 
+	width: 100%; 
+	background-color: #2A93FC; 
+}
+
+.slogan {
+	margin: auto; 
+	font-size: 30px;
+	color: white;
+	font-family: 'Gochi Hand', cursive; 
+}
+
+
+.divider {
+	margin: auto;
+	height: 40px; 
+	border-bottom: 1px solid #2A93FC;
+}
+
+.buttonCase {
+	margin: auto; 
+}
+
+.addButton {
+	height: 30px; width: 150px; background-color: #66FF66; font-family: cursive; color: black; font-size: 15px;
+}
+
+.button {
+	height: 40px; 
+	width: 80px; 
+	font-family: cursive; 
+	color: white; 
+	font-size: 17px; 
+	margin-right: 10px;
+}
+
+.submit {
+	background-color: #336633;
+}
+
+.cancel {
+	background-color: #CC3300;
+}
+
+.delete {
+	background-color: purple;
+}
+
+.inputBox {
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.menu {
+	height: 120px; 
+	background-color: #FEFEB8; 
+	justify-content: space-evenly;
+	font-size: 30px;
+	font-family: 'Josefin Slab', serif;
+}
+
+#categoryName {
+	margin: auto;
+	text-decoration: none;
+	color: black;
+}
+
+#categoryName:visited {
+	text-decoration: none;
+	color: black;
+}
+
+#categoryName:hover {
+	color: red;
+}
+
+.buttons {
+	margin-top: 20px;
+}

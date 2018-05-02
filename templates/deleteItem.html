@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
+    <title>Vintage Gaming, Inc.</title> 
+  </head>
+  <body>
+    <header class="box">
+      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage Gaming, Inc.</a>
+    </header>
+    <div class="box sloganBox">
+      <p class="slogan">Be a Kid Again</p>
+    </div>
+    <div class="divider"></div> 
+    <main class="formMain">
+      <form action='{{url_for('deleteItem', category_name = category.name, item_name = item.name)}}' method='post'>
+        <h1 class="titleHeader">Delete Item - {{item.name}}</h1>
+				<h2 class="deleteHeader">Are you sure you want to delete item {{item.name}}?
+				<br>
+				<div class="buttons">
+					<input class="button submit" type="submit" value="Yes"> 
+					<a href='{{url_for('showCategory', category_name = category.name)}}'><input class="button cancel" type="button" value="Cancel"></a>
+				</div>
+      </form>
+    </main> 
+  </body> 
+</html> 
+
