@@ -28,9 +28,9 @@
 				<input class="inputBox" type='text' size='40' value="{{item.image}}" name='image'> 
         <br><br> 
         <input class="button submit" type='submit' value="Submit" name="button submit"> 
-        <a href='{{url_for('showCategory', category_name = category.name)}}'><input class="button cancel" type="button" value="Cancel"></a>
+				<a href='{{url_for('showItem', item_name = item.name, category_name = category.name)}}'><button class="button cancel" type="button">Cancel</button></a>
 				<br><br> 
-        <a href='{{url_for('deleteItem', category_name = category.name, item_name = item.name)}}'><input class="button delete" type="button" value="Delete"></a>
+        <a href='{{url_for('deleteItem', category_name = category.name, item_name = item.name)}}'><input class="longButton delete" type="button" value="Delete Item"></a>
       </form>
     </main> 
   </body> 

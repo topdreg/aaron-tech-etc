@@ -3,13 +3,13 @@
 	<head> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
 		<link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
 		<title>Vintage Gaming, Inc.</title> 
 	</head> 
 	<body> 
 		<header class="box">
-      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage Gaming, Inc.</a>
+			<a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage<span class="gamingLabel"> Gaming</span></a>
 		</header> 
 		<div class="box sloganBox">
 			<p class="slogan">Be a Kid Again</p> 
@@ -19,11 +19,29 @@
 				<a id="categoryName" href='{{url_for('showCategory', category_name = i.name)}}'>{{i.name}}</a>
 			{% endfor %}
 		</div> 
-		<div class="box divider">
-			<a class="buttonCase" href='{{url_for('addCategory')}}'><button class="addButton">Add Category</button></a> 
+		<div class="divider">
+			<a class="addButton" href='{{url_for('addCategory')}}'><button class="add longButton">Add Category</button></a> 
 		</div> 
-		<main>
+		<div class="mainHeader">Latest Items</div>
+		<main class="displayMain">
+      {% for item in latestItems %}
+				<a class="infoBox" href='{{url_for('showItem', item_name = item.name, category_name = categories[item.category_id - 1].name)}}'>
+          <img class="itemImage" src="{{item.image}}">
+          <p class="itemName">{{item.name}}</p> 
+          <div class="itemPrice">{{item.price}}</div>
+          <p class="itemDescription">{{item.description}}</p>
+        </a>
+      {% endfor %}
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
 		</main> 
+		<footer>
+			<p class="footerText">Aaron Percival</p> 
+			<p class="footerText">971-322-5043</p> 
+			<p class="footerText">apercival314@gmail.com</p>
+		</footer>
 	</body> 
 </html> 
-

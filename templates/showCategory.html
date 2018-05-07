@@ -1,36 +1,43 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
     <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
     <title>Vintage Gaming, Inc.</title> 
-  </head> 
-  <body> 
+  </head>
+  <body>
     <header class="box">
-      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage Gaming, Inc.</a>
-    </header> 
+      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage<span class="gamingLabel"> Gaming</span></a>
+    </header>
     <div class="box sloganBox">
-      <p class="slogan">Be a Kid Again</p> 
-    </div> 
+      <p class="slogan">Be a Kid Again</p>
+    </div>
     <div class="box menu">
-      {% for i in categories %}       
+      {% for i in categories %}
         <a id="categoryName" href='{{url_for('showCategory', category_name = i.name)}}'>{{i.name}}</a>
       {% endfor %}
     </div> 
     <div class="box divider">
-      <a class="buttonCase" href='{{url_for('addItem', category_name = category.name)}}'><button class="addButton">Add Item</button></a> 
+      <a class="buttonCase" href='{{url_for('addItem', category_name = category.name)}}'><button class="add longButton">Add Item</button></a> 
+			<a class="buttonCase" href='{{url_for('editCategory', category_name = category.name)}}'><button class="edit longButton">Edit Category</button></a>
     </div> 
+		<div class="mainHeader">{{category.name}}</div>
     <main class="displayMain">
 			{% for item in items %}
-				<a class="infoBox" href='{{url_for('editItem', category_name = category.name, item_name = item.name)}}'>
-					<img class="itemImage" src="{{item.image}}" height="200" width="200">
+				<a class="infoBox" href='{{url_for('showItem', item_name = item.name, category_name = category.name)}}'>
+					<img class="itemImage" src="{{item.image}}">
 					<p class="itemName">{{item.name}}</p> 
 					<div class="itemPrice">{{item.price}}</div>
 					<p class="itemDescription">{{item.description}}</p> 
 				</a>
 			{% endfor %} 
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
+			<div class="phantomBox"></div>
     </main> 
   </body> 
 </html> 
