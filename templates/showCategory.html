@@ -19,10 +19,6 @@
         <a id="categoryName" href='{{url_for('showCategory', category_name = i.name)}}'>{{i.name}}</a>
       {% endfor %}
     </div> 
-    <div class="box divider">
-      <a class="buttonCase" href='{{url_for('addItem', category_name = category.name)}}'><button class="add longButton">Add Item</button></a> 
-			<a class="buttonCase" href='{{url_for('editCategory', category_name = category.name)}}'><button class="edit longButton">Edit Category</button></a>
-    </div> 
 		<div class="mainHeader">{{category.name}}</div>
     <main class="displayMain">
 			{% for item in items %}

@@ -26,6 +26,10 @@ main {
 	display: flex;
 }
 
+a {
+	text-decoration: none;
+}
+
 .displayMain {
 	flex-flow: row wrap; 
 	justify-content: space-evenly;
@@ -110,7 +114,11 @@ input {
 }
 
 .longButton {
-	height: 30px; width: 150px; font-family: cursive; color: black; font-size: 15px; color: white;
+	height: 30px; width: 150px; font-family: cursive; color: black; font-size: 15px; color: white; text-decoration: none; border: none;
+}
+
+.signoutButton {
+	height: 35px; width: 120px; font-size: 15px; background-color: #3D3DFF; border-radius: 20px; color: white; font-weight: bold; font-family: 'PT Sans', sans-serif; border: none; margin-right: 10px;
 }
 
 .button {
@@ -120,10 +128,34 @@ input {
 	color: white; 
 	font-size: 17px; 
 	margin-right: 10px;
+	border: none;
+}
+
+.buttonDisplay {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 10px;
+	text-decoration: none;
+}
+
+.hollowButton {
+	height: 60px;
+	width: 130px;
+	font-size: 16px;
+	background: transparent;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
+	border-radius: 15px;
+	margin-right: 10px;
+}
+
+.hollowButton:hover {
+	cursor: pointer;
 }
 
 .add {
-	background-color: green; 
+	color: green; 
+	border: 5px solid green;
 }
 
 .addButton {
@@ -136,7 +168,8 @@ input {
 }
 
 .edit {
-	background-color: orange;
+	color: orange; 
+	border: 5px solid orange;
 }
 
 .cancel {
@@ -224,8 +257,7 @@ input {
 }
 
 .editItemButton {
-	padding-top: 80px;
-	margin: 40px 40px;
+	margin-left: 5%;
 }
 
 .showItemPrice {
@@ -254,6 +286,22 @@ input {
 
 footer {
 	margin-bottom: 5px;
+}
+
+.securityBar {
+	border-bottom: 1px solid #D6D6D6;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#signinButton {
+	margin-top: 10px;
+}
+
+#initialSignoutButton {
+	display: none;
 }
 
 @media screen and (min-width: 1490px) {

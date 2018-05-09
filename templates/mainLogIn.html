@@ -11,18 +11,7 @@
 	</head> 
 	<body> 
 		<div class="securityBar">
-			<div id="signinButton">
-				<span class="g-signin"
-					data-scope="openid email"
-					data-clientid="305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com"
-					data-redirecturi="postmessage"
-					data-accesstype="offline"
-					data-cookiepolicy="single_host_origin"
-					data-callback="signInCallback"
-					data-approvalprompt="force">	
-				</span>
-			</div>
-		  <a id="initialSignoutButton" href='{{url_for('gdisconnect')}}'><button class="signoutButton">Signout</button></a>
+			<a href='{{url_for('gdisconnect')}}'><button class="signoutButton">Signout</button></a> 
 		</div>
 		<header class="box">
 			<a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage<span class="gamingLabel"> Gaming</span></a>
@@ -36,6 +25,7 @@
 			{% endfor %}
 		</div> 
 		<div class="divider"></div> 
+		<a class="buttonDisplay" href='{{url_for('addCategory')}}'><button class="add hollowButton">Add Category</button></a> 
 		<div class="mainHeader">Latest Items</div>
 		<main class="displayMain">
       {% for item in latestItems %}
@@ -57,23 +47,6 @@
 			<p class="footerText">971-322-5043</p> 
 			<p class="footerText">apercival314@gmail.com</p>
 		</footer>
-	
-		<script>
-				function signInCallback(authResult) {
-					if (authResult['code']) {
-						$('#signinButton').css("display", "none"); 
-						$('#initialSignoutButton').css("display", "block");
-					}
-
-					$.ajax({
-						type: 'POST',
-						url: '/gconnect?state={{STATE}}',
-						processdata: false,
-						data: authResult['code'],
-						contentType: 'application/octet-stream; charset=utf-8'
-					});
-				}
-		</script>
-
 	</body> 
 </html> 
+
