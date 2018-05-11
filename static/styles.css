@@ -118,7 +118,11 @@ input {
 }
 
 .signoutButton {
-	height: 35px; width: 120px; font-size: 15px; background-color: #3D3DFF; border-radius: 20px; color: white; font-weight: bold; font-family: 'PT Sans', sans-serif; border: none; margin-right: 10px;
+	height: 30px; width: 120px; font-size: 15px; background-color: #3D3DFF; border-radius: 20px; color: white; font-weight: bold; font-family: 'PT Sans', sans-serif; border: none; margin-right: 5px; margin-bottom: 8px;
+}
+
+#signinButton {
+	margin-right: 5px;
 }
 
 .button {
@@ -221,7 +225,7 @@ input {
 	width: 100%;
 	text-align: center;
 	padding-top: 20px;
-	padding-bottom: 15px;
+	padding-bottom: 5px;
 	font-size: 30px;
 	color: #AFAFAF;
 	font-family: 'Alegreya SC', serif;
@@ -293,14 +297,10 @@ footer {
 
 .securityBar {
 	border-bottom: 1px solid #D6D6D6;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
 	display: flex;
 	justify-content: flex-end;
-}
-
-#signinButton {
-	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 #initialSignoutButton {

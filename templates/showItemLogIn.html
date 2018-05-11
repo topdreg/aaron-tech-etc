@@ -6,10 +6,9 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
     <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
     <title>Aaron's Tech Etc.</title> 
-  </head>
-  <body>
+  </head> <body>
     <header class="box">
-      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Aaron's<span class="techLabel"> Tech Etc.</span></a>
+      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Aaron's<span class="techLabel"> Tech Etc. </span><img src="../../static/colorful-kite.png" height=40 width=40></a>
     </header>
     <div class="box sloganBox">
       <p class="slogan">Be a Kid Again</p>
@@ -35,5 +34,9 @@
       </div>
     </main>
     <a class="editItemButton" href='{{url_for('editItem', item_name = item.name, category_name = category.name)}}'><button class="hollowButton edit" type="button" value="Edit">Edit</button></a>
+    <footer>
+      <p class="footerText">Aaron Percival</p>
+      <p class="footerText">apercival314@gmail.com</p>
+    </footer>
   </body>
 </html>
