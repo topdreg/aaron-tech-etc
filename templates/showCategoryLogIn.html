@@ -3,13 +3,13 @@
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
     <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
-    <title>Vintage Gaming, Inc.</title> 
+    <title>Aaron's Tech Etc.</title> 
   </head>
   <body>
     <header class="box">
-      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Vintage<span class="gamingLabel"> Gaming</span></a>
+      <a class="mainTitle" href='{{url_for('showCatalog')}}'>Aaron's<span class="techLabel"> Tech Etc.</span></a>
     </header>
     <div class="box sloganBox">
       <p class="slogan">Be a Kid Again</p>
@@ -31,7 +31,7 @@
           <img class="itemImage" src="{{item.image}}">
           <p class="itemName">{{item.name}}</p> 
           <div class="itemPrice">{{item.price}}</div>
-          <p class="itemDescription">{{item.description}}</p> 
+          <p class="itemDescription">{{item.short_description}}</p> 
         </a>
       {% endfor %}
       <div class="phantomBox"></div>

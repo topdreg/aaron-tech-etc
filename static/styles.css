@@ -221,17 +221,19 @@ input {
 	width: 100%;
 	text-align: center;
 	padding-top: 20px;
+	padding-bottom: 15px;
 	font-size: 30px;
 	color: #AFAFAF;
 	font-family: 'Alegreya SC', serif;
 }
 
-.gamingLabel {
+.techLabel {
 	font-family: 'Cabin Sketch', cursive;
 }
 
 .showItemDesc {
-	font-size: 25px;
+	margin-top: 20px;
+	font-size: 22px;
 	width: 600px;
 	margin-right: 15px;
 }
@@ -274,6 +276,7 @@ input {
 .itemPage {
 	width: 90%;
 	margin: 0 auto;
+	padding-bottom: 20px;
 	justify-content: space-between;
 }
 

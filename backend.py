@@ -26,7 +26,41 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine) 
 session = DBSession() 
 
-# Security endpoint.
+
+# JSON endpoints listed below. 
+
+
+# JSON endpoint for a list of all categories.
+
+@app.route('/catalog/JSON')
+def showCategoriesJSON():
+    categories = session.query(Categories).all()
+    return jsonify(Categories=[i.serialize for i in categories])
+
+# JSON endpoint for a single category. 
+
+@app.route('/catalog/<int:category_id>/JSON')
+def showCategoryJSON(category_id):
+    category = session.query(Categories).filter_by(id=category_id).first()
+    return jsonify(category.serialize)
+
+# JSON endpoint for a list of all items. 
+
+@app.route('/catalog/<int:category_id>/items/JSON')
+def showItemsJSON(category_id):
+    items = session.query(Items).filter_by(category_id=category_id).all()
+    return jsonify(Items=[i.serialize for i in items])
+
+# JSON endpoint for a single item. 
+
+@app.route('/catalog/items/<int:item_id>/JSON')
+def showItemJSON(item_id):
+    item = session.query(Items).filter_by(id=item_id).first()
+    return jsonify(item.serialize)
+
+
+
+# Security endpoints.
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
     # Validate state token.
@@ -193,7 +227,7 @@ def addItem(category_name):
         return redirect(url_for('showCategory', category_name = category_name))
     category = session.query(Categories).filter_by(name=category_name).one() 
     if request.method == 'POST': 
-        newItem = Items(name=request.form['name'], description=request.form['description'],
+        newItem = Items(name=request.form['name'], short_description=request.form['short_description'], description=request.form['description'],
         price=request.form['price'], image=request.form['image'], category_id=category.id)
         session.add(newItem) 
         session.commit()
@@ -210,6 +244,7 @@ def editItem(item_name, category_name):
     item = session.query(Items).filter_by(name=item_name).one()
     if request.method == 'POST': 
         item.name = request.form['name'] 
+        item.short_description = request.form['short_description']
         item.description = request.form['description']
         item.price = request.form['price']
         item.image = request.form['image']

@@ -20,8 +20,7 @@ class Categories(Base):
     def serialize(self): 
         return { 
             'id': self.id, 
-            'name': self.name, 
-            'description': self.description
+            'name': self.name 
         }   
 
 class Items(Base): 
@@ -29,12 +28,25 @@ class Items(Base):
 
     name = Column(String(80), nullable = False) 
     id = Column(Integer, primary_key = True) 
-    description = Column(String(500)) 
+    short_description = Column(String(500))
+    description = Column(String(1000)) 
     price = Column(String(8))
     image = Column(String(250))
     time_created = Column('last_updated', DateTime(timezone=True), server_default=func.now())
     category_id = Column(Integer, ForeignKey('categories.id'))
     categories = relationship(Categories)
+
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'id': self.id,
+            'short_description': self.short_description,
+            'description': self.description,
+            'price': self.price,
+            'image': self.image,
+            'category_id': self.category_id
+        }
 
 engine = create_engine('sqlite:///catalog.db') 
 Base.metadata.create_all(engine)
