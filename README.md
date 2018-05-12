@@ -50,3 +50,6 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Known Issues/Future Plans 
 In the future, I would like to implement the web page onto a persistent web address, instead of having the user git clone the project. Image storage, instead of referencing a URL, would be nice also. And of course, I'm constantly figuring out how to make the item catalog look prettier.
+
+## Attribution
+The item descriptions were taken from Best Buy, Gamestop, Fry's Electronics, and Target. The website was inspired in part by Richard Gieg at http://www.richgieg.com, although the code is all mine.
