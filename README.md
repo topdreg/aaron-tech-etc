@@ -34,18 +34,18 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Screenshots
 ![](main.png)     
-<strong style="margin: auto">Main page.</strong>
+<strong style="text-align: center;">Main page.</strong>
 
 
 
 ![](fullpage.png)
-
+<strong>Category page in administrative mode</strong>
 
 
 
 
 ![](addItem.png)
-
+<strong>Add item page.</strong>
 
 
 
