@@ -36,19 +36,19 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 The color scheme is a little distorted in the screenshots, and the text seems slightly compressed, but this is the best I could find. I swear it looks better in action!
 
 ![](main.png)
-<strong>View of the home page.</strong>
+
 
 
 ![](showCategory.png)
-<strong>Specific category page shown by clicking on an item in the menu bar, in administative mode.</strong>
+
 
 
 ![](4items.png)
-<strong>Demonstration of the flexbox layout.</strong>
+
 
 
 ![](addItem.png)
-<strong>Administrative page for adding an item to the catalog.</strong>
+
 
 
 
