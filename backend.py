@@ -13,9 +13,6 @@ import json
 from flask import make_response
 import requests
 
-import time
-from time import sleep
-
 app = Flask(__name__)
 
 CLIENT_ID = json.loads(open('client_secrets.json', 'r').read())['web']['client_id']

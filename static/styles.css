@@ -49,6 +49,7 @@ input {
 	font-size: 35px;
 	text-decoration: none;
 	color: black;
+	padding-top: 5px;
 }
 
 .infoBox {
