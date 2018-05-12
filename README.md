@@ -33,7 +33,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 * Javascript (small amount)
 
 ## Screenshots
-The color scheme is a little distorted in the screenshots, and the text seems slightly compressed, but this is the best I could find.  
+The color scheme is a little distorted in the screenshots, but this is the best I could find.  
 
 ![](main.png)     
 
