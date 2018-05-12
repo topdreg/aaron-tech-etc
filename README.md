@@ -33,15 +33,13 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 * Javascript (small amount)
 
 ## Screenshots
-The color scheme is a little distorted in the screenshots, and the text seems slightly compressed, but this is the best I could find. 
-
-Also, there are more rows than simply the one in the screenshots, with the last row being left-aligned while using Flexbox.  
+The color scheme is a little distorted in the screenshots, and the text seems slightly compressed, but this is the best I could find.  
 
 ![](main.png)
 
 
 
-![](showCategory.png)
+![](fullpage.png)
 
 
 
