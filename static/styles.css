@@ -308,6 +308,14 @@ footer {
 	display: none;
 }
 
+.flashMessage {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
 @media screen and (min-width: 1490px) {
 	body {
 		max-width: 1490px;

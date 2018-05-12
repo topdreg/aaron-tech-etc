@@ -3,7 +3,7 @@
 	<head> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
 		<link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
 		<title>Aaron's Tech Etc.</title> 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -25,6 +25,13 @@
 			{% endfor %}
 		</div> 
 		<div class="divider"></div> 
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="flashMessage">{{message}}</div>
+        {% endfor %} 
+      {% endif %}
+    {% endwith %}
 		<div class="buttonDisplay">
 			<a href='{{url_for('addCategory')}}'><button class="add hollowButton">Add Category</button></a> 
 		</div>
