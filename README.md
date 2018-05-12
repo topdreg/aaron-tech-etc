@@ -43,10 +43,6 @@ The color scheme is a little distorted in the screenshots, and the text seems sl
 
 
 
-![](4items.png)
-
-
-
 ![](addItem.png)
 
 
