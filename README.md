@@ -34,7 +34,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Screenshots
 ![](main.png)
-<center>View of the home page.</center>
+<div style="text-align: center">View of the home page.</div>
 <br>
 
 ![](showCategory.png)
