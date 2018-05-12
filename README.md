@@ -34,12 +34,15 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Screenshots
 ![](main.png)
+View of the home page.
 
 ![](showCategory.png)
+Specific category page shown by clicking on an item in the menu bar, in administative mode.
 
 ![](4items.png)
+Demonstration of the flexbox layout.
 
 ![](addItem.png)
-
+Administrative page for adding an item to the catalog
 
 
