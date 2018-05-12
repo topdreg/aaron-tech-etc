@@ -34,7 +34,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Screenshots
 ![](main.png)     
-<strong style="text-align: center;">Main page.</strong>
+<strong>Main page.</strong>
 
 
 
