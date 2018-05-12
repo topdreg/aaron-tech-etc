@@ -32,7 +32,11 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 * JSON endpoints
 * Javascript (small amount)
 
-
+## Screenshots
+![](main.png)
+![](showCategory.png)
+![](4items.png)
+![](addItem.png)
 
 
 
