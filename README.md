@@ -35,7 +35,6 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 ## Screenshots
 ![](main.png)
 <strong>View of the home page.</strong>
-<br>
 
 ![](showCategory.png)
 Specific category page shown by clicking on an item in the menu bar, in administative mode.
