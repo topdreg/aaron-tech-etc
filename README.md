@@ -39,7 +39,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 
 ![](fullpage.png)
-<strong>Category page in administrative mode</strong>
+<strong>Category page in administrative mode with a recent item edit.</strong>
 
 
 
