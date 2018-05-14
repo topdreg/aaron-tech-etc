@@ -1,7 +1,7 @@
 ## Project Description
 This project was developed for Udacity's Fullstack Developer degree program. It is an item catalog application, my own mock
 representation of what a personal electronics store would have as a website. The website demonstrates CRUD operations,
-OAuth 2.0 authentication, mobile responsiveness, HTML/CSS trickery, JSON endpoints, and more!
+OAuth 2.0 authentication, mobile responsiveness, HTML/CSS trickery, JSON endpoints, Flask, Jinja, message flashing, and more!
 
 ## Getting Started
 To test and use the application, clone this github.
@@ -24,12 +24,15 @@ To use the administrative functions, a Google sign-in button is present on the m
 The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, and a standard computer monitor).
 
 ## Technologies Used
+* Python
 * Flask
 * sqlalchemy
 * OAuth 2.0
 * HTML/CSS
+* Jinja
 * Flexbox
 * JSON endpoints
+* Message flashing (through Flask)
 * Javascript (small amount)
 
 ## Screenshots
@@ -39,7 +42,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 
 ![](fullpage.png)
-<strong>Category page in administrative mode</strong>
+<strong>Category page in administrative mode with a recent item edit.</strong>
 
 
 
@@ -50,6 +53,8 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 ## Known Issues/Future Plans 
 In the future, I would like to implement the web page onto a persistent web address, instead of having the user git clone the project. Image storage, instead of referencing a URL, would be nice also. And of course, I'm constantly figuring out how to make the item catalog look prettier.
+
+Creating a secure login system might be worthwhile, although the purpose of this project is to let others try it out. 
 
 ## Attribution
 The item descriptions were taken from Best Buy, Gamestop, Fry's Electronics, and Target.
