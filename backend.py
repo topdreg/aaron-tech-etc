@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from flask import request, redirect, url_for, jsonify, flash
 from sqlalchemy import create_engine, asc, desc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Categories, Items
+from database_setup import Base, Categories, Items, User
 
 # Security imports.
 from flask import session as login_session
@@ -63,6 +63,26 @@ def showItemJSON(item_id):
     item = session.query(Items).filter_by(id=item_id).first()
     return jsonify(item.serialize)
 
+# Create user functionality.
+def createUser(login_session):
+    newUser = User(name = login_session['username'], email =
+                   login_session['email'])
+    session.add(newUser)
+    session.commit()
+    user = session.query(User).filter_by(email =
+                                 login_session['email']).one()
+    return user.id
+
+def getUserID(email):
+    try:
+        user = session.query(User).filter_by(email = email).one()
+        return user.id
+    except:
+        return None
+
+def getUserInfo(user_id):
+    user = session.query(User).filter_by(id=user_id).one()
+    return user
 
 # Application endpoints listed below.
 
@@ -98,7 +118,8 @@ def showCategory(category_name):
     categories = session.query(Categories)
     category = session.query(Categories).filter_by(name=category_name).first()
     items = session.query(Items).filter_by(category_id=category.id)
-    if 'username' not in login_session:
+    creator = getUserInfo(category.user_id)
+    if 'username' not in login_session or creator.id != login_session['user_id']:
         return render_template(
             "showCategory.html",
             items=items,
@@ -117,7 +138,8 @@ def addCategory():
     if 'username' not in login_session:
         return redirect('/')
     if request.method == 'POST':
-        newCategory = Categories(name=request.form['name'])
+        newCategory = Categories(name=request.form['name'],
+                                 user_id=login_session['user_id'])
         session.add(newCategory)
         session.commit()
         flash("Category successfully added.")
@@ -129,9 +151,11 @@ def addCategory():
 
 @app.route('/catalog/<category_name>/editCategory', methods=['GET', 'POST'])
 def editCategory(category_name):
-    if 'username' not in login_session:
-        return redirect(url_for('showCategory', category_name=category_name))
     category = session.query(Categories).filter_by(name=category_name).one()
+    creator = getUserInfo(category.user_id)
+    if 'username' not in login_session or creator.id != login_session['user_id']:
+        flash("You are not the user who created this category.")
+        return redirect(url_for('showCategory', category_name=category_name))
     if request.method == 'POST':
         category.name = request.form['name']
         session.add(category)
@@ -148,11 +172,13 @@ def editCategory(category_name):
 
 @app.route('/catalog/<category_name>/deleteCategory', methods=['GET', 'POST'])
 def deleteCategory(category_name):
-    if 'username' not in login_session:
-        return redirect(url_for('showCategory', category_name=category_name))
     category = session.query(Categories).filter_by(name=category_name).first()
-    items = session.query(Items).filter_by(category_id=category.id)
+    creator = getUserInfo(category.user_id)
+    if 'username' not in login_session or creator.id != login_session['user_id']:
+        flash("You are not the user who created this category.")
+        return redirect(url_for('showCategory', category_name=category_name))
     if request.method == 'POST':
+        items = session.query(Items).filter_by(category_id=category.id)
         session.delete(category)
         for item in items:
             session.delete(item)
@@ -198,6 +224,7 @@ def addItem(category_name):
             description=request.form['description'],
             price=request.form['price'],
             image=request.form['image'],
+            user_id=login_session['user_id'],
             category_id=category.id)
         session.add(newItem)
         session.commit()
@@ -214,14 +241,16 @@ def addItem(category_name):
 @app.route('/catalog/<category_name>/<item_name>/edit',
            methods=['GET', 'POST'])
 def editItem(item_name, category_name):
-    if 'username' not in login_session:
+    item = session.query(Items).filter_by(name=item_name).one()
+    creator = getUserInfo(item.user_id)
+    if 'username' not in login_session or creator.id != login_session['user_id']:
+        flash("You are not the user who created this item.")
         return redirect(
             url_for(
                 'showItem',
                 item_name=item_name,
                 category_name=category_name))
     category = session.query(Categories).filter_by(name=category_name).one()
-    item = session.query(Items).filter_by(name=item_name).one()
     if request.method == 'POST':
         item.name = request.form['name']
         item.short_description = request.form['short_description']
@@ -243,13 +272,15 @@ def editItem(item_name, category_name):
 @app.route('/catalog/<category_name>/<item_name>/delete',
            methods=['GET', 'POST'])
 def deleteItem(item_name, category_name):
-    if 'username' not in login_session:
+    item = session.query(Items).filter_by(name=item_name).one()
+    creator = getUserInfo(item.user_id)
+    if 'username' not in login_session or creator.id != login_session['user_id']:
+        flash("You are not the user who created this item.")
         return redirect(
             url_for(
                 'showItem',
                 item_name=item_name,
                 category_name=category_name))
-    item = session.query(Items).filter_by(name=item_name).first()
     category = session.query(Categories).filter_by(name=category_name).one()
     if request.method == 'POST':
         session.delete(item)
@@ -336,6 +367,13 @@ def gconnect():
     data = answer.json()
 
     login_session['username'] = data['name']
+    login_session['email'] = data['email']
+
+    # See if user exists, if it doesn't make a new one.
+    user_id = getUserID(login_session['email'])
+    if not user_id:
+        user_id = createUser(login_session)
+    login_session['user_id'] = user_id
 
     return "Login successful."
 

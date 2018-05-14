@@ -3,7 +3,8 @@
 	<head> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet"> 
+		<script src="static/app.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Alegreya+SC|Cabin+Sketch|Josefin+Slab|EB+Garamond|Gochi+Hand|Special+Elite" rel="stylesheet" onerror="APIErrorMessage()"> 
 		<link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
 		<title>Aaron's Tech Etc.</title> 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -77,6 +78,10 @@
 						data: authResult['code'],
 						contentType: 'application/octet-stream; charset=utf-8'
 					});
+				}
+
+				function APIErrorMessage() {
+					alert("Google API is not available at the moment - please check back in again later");
 				}
 		</script>
 
