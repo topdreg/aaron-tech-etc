@@ -64,27 +64,32 @@ def showItemJSON(item_id):
     return jsonify(item.serialize)
 
 # Create user functionality.
+
+
 def createUser(login_session):
-    newUser = User(name = login_session['username'], email =
-                   login_session['email'])
+    newUser = User(
+        name=login_session['username'],
+        email=login_session['email'])
     session.add(newUser)
     session.commit()
-    user = session.query(User).filter_by(email =
-                                 login_session['email']).one()
+    user = session.query(User).filter_by(email=login_session['email']).one()
     return user.id
+
 
 def getUserID(email):
     try:
-        user = session.query(User).filter_by(email = email).one()
+        user = session.query(User).filter_by(email=email).one()
         return user.id
-    except:
+    except BaseException:
         return None
+
 
 def getUserInfo(user_id):
     user = session.query(User).filter_by(id=user_id).one()
     return user
 
 # Application endpoints listed below.
+
 
 @app.route('/')
 @app.route('/catalog')
@@ -389,6 +394,7 @@ def gdisconnect():
     return redirect(url_for('showCatalog'))
 
 # HTML endpoints listed below.
+
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
