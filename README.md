@@ -27,7 +27,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 * Python
 * Flask
 * sqlalchemy
-* OAuth 2.0
+* OAuth 2.0 with Google API
 * HTML/CSS
 * Jinja
 * Flexbox
