@@ -88,8 +88,8 @@ def getUserInfo(user_id):
     user = session.query(User).filter_by(id=user_id).one()
     return user
 
-# Application endpoints listed below.
 
+# Application endpoints listed below.
 
 @app.route('/')
 @app.route('/catalog')
@@ -118,7 +118,9 @@ def showCatalog():
             latestItems=latestItems)
 
 
-@app.route('/catalog/<category_name>')
+# sqlalchemy's filter_by function supposedly has sql injection protection.
+
+@app.route('/catalog/<string:category_name>')
 def showCategory(category_name):
     categories = session.query(Categories)
     category = session.query(Categories).filter_by(name=category_name).first()
@@ -154,7 +156,7 @@ def addCategory():
         return render_template("addCategory.html", categories=categories)
 
 
-@app.route('/catalog/<category_name>/editCategory', methods=['GET', 'POST'])
+@app.route('/catalog/<string:category_name>/editCategory', methods=['GET', 'POST'])
 def editCategory(category_name):
     category = session.query(Categories).filter_by(name=category_name).one()
     creator = getUserInfo(category.user_id)
@@ -175,7 +177,7 @@ def editCategory(category_name):
             categories=categories)
 
 
-@app.route('/catalog/<category_name>/deleteCategory', methods=['GET', 'POST'])
+@app.route('/catalog/<string:category_name>/deleteCategory', methods=['GET', 'POST'])
 def deleteCategory(category_name):
     category = session.query(Categories).filter_by(name=category_name).first()
     creator = getUserInfo(category.user_id)
@@ -198,7 +200,7 @@ def deleteCategory(category_name):
             categories=categories)
 
 
-@app.route('/catalog/<category_name>/<item_name>')
+@app.route('/catalog/<string:category_name>/<string:item_name>')
 def showItem(item_name, category_name):
     item = session.query(Items).filter_by(name=item_name).first()
     categories = session.query(Categories)
@@ -217,7 +219,7 @@ def showItem(item_name, category_name):
             category=category)
 
 
-@app.route('/catalog/<category_name>/addItem', methods=['GET', 'POST'])
+@app.route('/catalog/<string:category_name>/addItem', methods=['GET', 'POST'])
 def addItem(category_name):
     if 'username' not in login_session:
         return redirect(url_for('showCategory', category_name=category_name))
@@ -243,7 +245,7 @@ def addItem(category_name):
             categories=categories)
 
 
-@app.route('/catalog/<category_name>/<item_name>/edit',
+@app.route('/catalog/<string:category_name>/<string:item_name>/edit',
            methods=['GET', 'POST'])
 def editItem(item_name, category_name):
     item = session.query(Items).filter_by(name=item_name).one()
@@ -274,7 +276,7 @@ def editItem(item_name, category_name):
         return render_template("editItem.html", item=item, category=category)
 
 
-@app.route('/catalog/<category_name>/<item_name>/delete',
+@app.route('/catalog/<string:category_name>/<string:item_name>/delete',
            methods=['GET', 'POST'])
 def deleteItem(item_name, category_name):
     item = session.query(Items).filter_by(name=item_name).one()
