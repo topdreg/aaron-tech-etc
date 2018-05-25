@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template
 from flask import request, redirect, url_for, jsonify, flash
-from sqlalchemy import create_engine, asc, desc
+from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Categories, Items, User
 
@@ -387,9 +387,6 @@ def gconnect():
 
 @app.route('/gdisconnect')
 def gdisconnect():
-    access_token = login_session.get('access_token')
-    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s' \
-        % login_session['access_token']
     del login_session['access_token']
     del login_session['gplus_id']
     del login_session['username']

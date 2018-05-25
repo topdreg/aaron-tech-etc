@@ -1,0 +1,162 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/bf8aa43/
+#categoryName	static/styles.css	/^#categoryName {$/;"	i
+#categoryName:hover	static/styles.css	/^#categoryName:hover {$/;"	i
+#categoryName:visited	static/styles.css	/^#categoryName:visited {$/;"	i
+#initialSignoutButton	static/styles.css	/^#initialSignoutButton {$/;"	i
+#signinButton	static/styles.css	/^#signinButton {$/;"	i
+.add	static/styles.css	/^.add {$/;"	c
+.addButton	static/styles.css	/^.addButton {$/;"	c
+.box	static/styles.css	/^.box {$/;"	c
+.button	static/styles.css	/^.button {$/;"	c
+.buttonCase	static/styles.css	/^.buttonCase {$/;"	c
+.buttonDisplay	static/styles.css	/^.buttonDisplay {$/;"	c
+.buttons	static/styles.css	/^.buttons {$/;"	c
+.cancel	static/styles.css	/^.cancel {$/;"	c
+.delete	static/styles.css	/^.delete {$/;"	c
+.displayMain	static/styles.css	/^.displayMain {$/;"	c
+.divider	static/styles.css	/^.divider {$/;"	c
+.edit	static/styles.css	/^.edit {$/;"	c
+.editItemButton	static/styles.css	/^.editItemButton {$/;"	c
+.flashMessage	static/styles.css	/^.flashMessage {$/;"	c
+.footerText	static/styles.css	/^.footerText {$/;"	c
+.formMain	static/styles.css	/^.formMain {$/;"	c
+.hollowButton	static/styles.css	/^.hollowButton {$/;"	c
+.hollowButton:hover	static/styles.css	/^.hollowButton:hover {$/;"	c
+.infoBox	static/styles.css	/^	.infoBox {$/;"	c
+.infoBox	static/styles.css	/^.infoBox {$/;"	c
+.inputBox	static/styles.css	/^.inputBox {$/;"	c
+.itemDescription	static/styles.css	/^	.itemDescription {$/;"	c
+.itemImage	static/styles.css	/^.itemImage {$/;"	c
+.itemName	static/styles.css	/^	.itemName {$/;"	c
+.itemName	static/styles.css	/^.itemName {$/;"	c
+.itemPage	static/styles.css	/^	.itemPage {$/;"	c
+.itemPage	static/styles.css	/^.itemPage {$/;"	c
+.itemParent	static/styles.css	/^	.itemParent {$/;"	c
+.itemParent	static/styles.css	/^.itemParent {$/;"	c
+.itemPrice	static/styles.css	/^.itemPrice {$/;"	c
+.longButton	static/styles.css	/^.longButton {$/;"	c
+.mainHeader	static/styles.css	/^.mainHeader {$/;"	c
+.mainTitle	static/styles.css	/^.mainTitle {$/;"	c
+.menu	static/styles.css	/^	.menu {$/;"	c
+.menu	static/styles.css	/^.menu {$/;"	c
+.phantomBox	static/styles.css	/^.phantomBox {$/;"	c
+.securityBar	static/styles.css	/^.securityBar {$/;"	c
+.showItemDesc	static/styles.css	/^	.showItemDesc{$/;"	c
+.showItemDesc	static/styles.css	/^.showItemDesc {$/;"	c
+.showItemImg	static/styles.css	/^.showItemImg {$/;"	c
+.showItemName	static/styles.css	/^.showItemName {$/;"	c
+.showItemPrice	static/styles.css	/^.showItemPrice {$/;"	c
+.signoutButton	static/styles.css	/^.signoutButton {$/;"	c
+.slogan	static/styles.css	/^.slogan {$/;"	c
+.sloganBox	static/styles.css	/^.sloganBox {$/;"	c
+.submit	static/styles.css	/^.submit {$/;"	c
+.techLabel	static/styles.css	/^.techLabel {$/;"	c
+0	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	array:web.javascript_origins
+0	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	array:web.redirect_uris
+APIErrorMessage	static/app.js	/^function APIErrorMessage() {$/;"	f
+Add Category	templates/addCategory.html	/^				<h1 class="titleHeader">Add Category<\/h1> $/;"	h
+Add Item - {{category.name}}	templates/addItem.html	/^        <h1 class="titleHeader">Add Item - {{category.name}}<\/h1> $/;"	h
+Attribution	README.md	/^## Attribution$/;"	s
+Base	database_setup.py	/^Base = declarative_base()$/;"	v
+CLIENT_ID	backend.py	/^CLIENT_ID = json.loads(open('client_secrets.json',$/;"	v
+Categories	database_setup.py	/^class Categories(Base):$/;"	c
+DBSession	backend.py	/^DBSession = sessionmaker(bind=engine)$/;"	v
+Delete Category - {{category.name}}	templates/deleteCategory.html	/^        <h1 class="titleHeader">Delete Category - {{category.name}}<\/h1>$/;"	h
+Delete Item - {{item.name}}	templates/deleteItem.html	/^        <h1 class="titleHeader">Delete Item - {{item.name}}<\/h1>$/;"	h
+Description	templates/addItem.html	/^        <h2>Description<\/h2> $/;"	i
+Description	templates/editItem.html	/^        <h2>Description<\/h2> $/;"	i
+Edit Category - {{category.name}}	templates/editCategory.html	/^        <h1 class="titleHeader">Edit Category - {{category.name}}<\/h1>$/;"	h
+Edit Item - {{category.name}}	templates/editItem.html	/^        <h1 class="titleHeader">Edit Item - {{category.name}}<\/h1>  $/;"	h
+Getting Started	README.md	/^## Getting Started$/;"	s
+How It Works	README.md	/^## How It Works$/;"	s
+Image	templates/addItem.html	/^        <h2>Image<\/h2> $/;"	i
+Image	templates/editItem.html	/^        <h2>Image<\/h2> $/;"	i
+Items	database_setup.py	/^class Items(Base):$/;"	c
+Known Issues/Future Plans	README.md	/^## Known Issues\/Future Plans $/;"	s
+Name	templates/addCategory.html	/^				<h2>Name<\/h2> $/;"	i
+Name	templates/addItem.html	/^        <h2>Name<\/h2> $/;"	i
+Name	templates/editCategory.html	/^        <h2>Name<\/h2>$/;"	i
+Name	templates/editItem.html	/^        <h2>Name<\/h2> $/;"	i
+Price	templates/addItem.html	/^        <h2>Price<\/h2> $/;"	i
+Price	templates/editItem.html	/^        <h2>Price<\/h2> $/;"	i
+Project Description	README.md	/^## Project Description$/;"	s
+Screenshots	README.md	/^## Screenshots$/;"	s
+Short Description	templates/addItem.html	/^        <h2>Short Description<\/h2> $/;"	i
+Short Description	templates/editItem.html	/^        <h2>Short Description<\/h2> $/;"	i
+Technologies Used	README.md	/^## Technologies Used$/;"	s
+User	database_setup.py	/^class User(Base):$/;"	c
+__tablename__	database_setup.py	/^    __tablename__ = 'categories'$/;"	v	class:Categories	file:
+__tablename__	database_setup.py	/^    __tablename__ = 'items'$/;"	v	class:Items	file:
+__tablename__	database_setup.py	/^    __tablename__ = 'user'$/;"	v	class:User	file:
+a	static/styles.css	/^a {$/;"	s
+addCategory	backend.py	/^def addCategory():$/;"	f
+addItem	backend.py	/^def addItem(category_name):$/;"	f
+app	backend.py	/^app = Flask(__name__)$/;"	v
+auth_provider_x509_cert_url	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+auth_uri	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+body	static/styles.css	/^	body {$/;"	s
+body	static/styles.css	/^body, html {$/;"	s
+categories	database_setup.py	/^    categories = relationship(Categories)$/;"	v	class:Items
+category_id	database_setup.py	/^    category_id = Column(Integer, ForeignKey('categories.id'))$/;"	v	class:Items
+client_id	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+client_secret	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+createUser	backend.py	/^def createUser(login_session):$/;"	f
+deleteCategory	backend.py	/^def deleteCategory(category_name):$/;"	f
+deleteItem	backend.py	/^def deleteItem(item_name, category_name):$/;"	f
+description	database_setup.py	/^    description = Column(String(1000))$/;"	v	class:Items
+editCategory	backend.py	/^def editCategory(category_name):$/;"	f
+editItem	backend.py	/^def editItem(item_name, category_name):$/;"	f
+email	database_setup.py	/^    email = Column(String(250), nullable=False)$/;"	v	class:User
+embed	static/styles.css	/^img, embed,$/;"	s
+engine	backend.py	/^engine = create_engine('sqlite:\/\/\/catalog.db')$/;"	v
+engine	database_setup.py	/^engine = create_engine('sqlite:\/\/\/catalog.db')$/;"	v
+footer	static/styles.css	/^footer {$/;"	s
+gconnect	backend.py	/^def gconnect():$/;"	f
+gdisconnect	backend.py	/^def gdisconnect():$/;"	f
+getUserID	backend.py	/^def getUserID(email):$/;"	f
+getUserInfo	backend.py	/^def getUserInfo(user_id):$/;"	f
+h2	static/styles.css	/^h2 {$/;"	s
+header	static/styles.css	/^header {$/;"	s
+html	static/styles.css	/^body, html {$/;"	s
+id	database_setup.py	/^    id = Column(Integer, primary_key=True)$/;"	v	class:Categories
+id	database_setup.py	/^    id = Column(Integer, primary_key=True)$/;"	v	class:Items
+id	database_setup.py	/^    id = Column(Integer, primary_key=True)$/;"	v	class:User
+image	database_setup.py	/^    image = Column(String(250))$/;"	v	class:Items
+img	static/styles.css	/^img, embed,$/;"	s
+input	static/styles.css	/^input {$/;"	s
+javascript_origins	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	a	object:web
+login_session	backend.py	/^from flask import session as login_session$/;"	x
+main	static/styles.css	/^main {$/;"	s
+name	database_setup.py	/^    name = Column(String(250), nullable=False)$/;"	v	class:Categories
+name	database_setup.py	/^    name = Column(String(250), nullable=False)$/;"	v	class:User
+name	database_setup.py	/^    name = Column(String(80), nullable=False)$/;"	v	class:Items
+object	static/styles.css	/^object, video {$/;"	s
+price	database_setup.py	/^    price = Column(String(8))$/;"	v	class:Items
+project_id	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+redirect_uris	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	a	object:web
+serialize	database_setup.py	/^    def serialize(self):$/;"	m	class:Categories
+serialize	database_setup.py	/^    def serialize(self):$/;"	m	class:Items
+session	backend.py	/^session = DBSession()$/;"	v
+short_description	database_setup.py	/^    short_description = Column(String(500))$/;"	v	class:Items
+showCatalog	backend.py	/^def showCatalog():$/;"	f
+showCategoriesJSON	backend.py	/^def showCategoriesJSON():$/;"	f
+showCategory	backend.py	/^def showCategory(category_name):$/;"	f
+showCategoryJSON	backend.py	/^def showCategoryJSON(category_id):$/;"	f
+showItem	backend.py	/^def showItem(item_name, category_name):$/;"	f
+showItemJSON	backend.py	/^def showItemJSON(item_id):$/;"	f
+showItemsJSON	backend.py	/^def showItemsJSON(category_id):$/;"	f
+signInCallback	static/app.js	/^function signInCallback(authResult) {$/;"	f
+time_created	database_setup.py	/^    time_created = Column($/;"	v	class:Items
+token_uri	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	s	object:web
+user	database_setup.py	/^    user = relationship(User)$/;"	v	class:Categories
+user	database_setup.py	/^    user = relationship(User)$/;"	v	class:Items
+user_id	database_setup.py	/^    user_id = Column(Integer, ForeignKey('user.id'))$/;"	v	class:Categories
+user_id	database_setup.py	/^    user_id = Column(Integer, ForeignKey('user.id'))$/;"	v	class:Items
+video	static/styles.css	/^object, video {$/;"	s
+web	client_secrets.json	/^{"web":{"client_id":"305102502505-lf030mom773dvbrdlqah9hlbn2kvpre7.apps.googleusercontent.com","/;"	o
