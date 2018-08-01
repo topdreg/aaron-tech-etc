@@ -101,6 +101,7 @@ def showCatalog():
             string.ascii_uppercase +
             string.digits) for x in range(32))
     login_session['state'] = state
+    print(login_session['state'])
 
     # Proceed with loading the page.
     categories = session.query(Categories)
@@ -307,7 +308,6 @@ def deleteItem(item_name, category_name):
 # Security endpoints.
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
-    print(login_session['state'])
     # Validate state token.
     if request.args.get('state') != login_session['state']:
         response = make_response(json.dumps('Invalid state parameter.'), 401)
