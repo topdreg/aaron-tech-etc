@@ -101,6 +101,7 @@ def showCatalog():
             string.ascii_uppercase +
             string.digits) for x in range(32))
     login_session['state'] = state
+    print(state)
 
     # Proceed with loading the page.
     categories = session.query(Categories)
