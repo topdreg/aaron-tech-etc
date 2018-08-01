@@ -10,6 +10,7 @@ from database_setup import Base, Categories, Items, User
 from flask import session as login_session
 import random
 import string
+import os
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 import httplib2
@@ -394,7 +395,7 @@ def gdisconnect():
 
 # HTML endpoints listed below.
 
-app.secret_key = 'super_secret_key'
+app.secret_key = os.urandom(24)
 
 if __name__ == '__main__':
     app.debug = True
