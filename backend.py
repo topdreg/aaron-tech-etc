@@ -396,7 +396,7 @@ def gdisconnect():
 
 # HTML endpoints listed below.
 
-app.secret_key = os.urandom(24)
+app.secret_key = 'super secret key'
 
 if __name__ == '__main__':
     app.debug = True
