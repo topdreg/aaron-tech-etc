@@ -394,8 +394,8 @@ def gdisconnect():
 
 # HTML endpoints listed below.
 
+app.secret_key = 'super_secret_key'
 
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
     app.debug = True
     app.run()
