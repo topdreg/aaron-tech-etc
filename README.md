@@ -4,7 +4,9 @@ representation of what a personal electronics store would have as a website. The
 OAuth 2.0 authentication, mobile responsiveness, HTML/CSS trickery, JSON endpoints, Flask, Jinja, message flashing, and more!
 
 ## Getting Started
-To test and use the application, clone this github.
+To access the Heroku deployment, go to: https://aaron-tech-etc.herokuapp.com/
+
+To test and use the application locally, first clone this github.
 
 The project involves the following library dependencies:
 * Flask
@@ -14,7 +16,7 @@ The project involves the following library dependencies:
 * JSON
 * requests
 
-Upon installing any missing dependencies, cd into the project directory and run python3 backend.py in the terminal. Open a browser window, and type http://localhost:8000 into the browser's address bar. From there, the application will show itself! 
+Upon installing any missing dependencies, cd into the project directory and run python3 backend.py in the terminal. Open a browser window, and type http://localhost:8000 into the browser's address bar. From there, the application will show itself. 
 
 ## How It Works
 The item catalog has several pages and functions. The main page shows the latest items that were added to the catalog. To switch to a specific category, hover over a category name in the menu and click on it. To examine a specific item, simply hover over an item box and click on it. 
