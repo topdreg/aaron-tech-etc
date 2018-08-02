@@ -54,7 +54,7 @@ The application is responsive on all screen sizes (tested on Galaxy 5S, IPad, an
 
 
 ## Known Issues/Future Plans 
-Eventually I should implement persistent image storage versus using a URL. And of course, I'm constantly figuring out how to make the item catalog look prettier.
+Eventually I should get around to implementing persistent image storage versus using a URL. And of course, I'm constantly figuring out how to make the item catalog look prettier.
 
 Security is also always a concern. I believe sql injection is not a problem with this application, as sqlalchemy's filter_by function supposedly guards against that. Still, there could be other security holes I'm not aware of. I'll be on a constant lookout.
 
